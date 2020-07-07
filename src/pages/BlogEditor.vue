@@ -23,8 +23,9 @@
           </el-col>
       </el-row>
       </div>
-
-        <mavon-editor :ishljs = "true" v-model="value" ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"/>
+        <div style="height:80%">
+          <mavon-editor :ishljs = "true" v-model="value" ref=md @imgAdd="$imgAdd" @imgDel="$imgDel" />
+        </div>
 <!--
             <mavon-editor
               class="md"
@@ -37,7 +38,8 @@
               :ishljs = "true"
             ></mavon-editor>
 -->
-    <my-uploadblog ref="child" :contentFromDad="value"></my-uploadblog>
+       
+       <my-uploadblog ref="child" :contentFromDad="value"></my-uploadblog>
 
     </div>
 

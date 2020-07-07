@@ -15,6 +15,11 @@ import 'mavon-editor/dist/css/index.css'
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/atom-one-dark.css'
 
+import { DatePicker } from 'ant-design-vue';
+Vue.use(DatePicker);
+
+//import 'ant-design-vue/dist/antd.css'; // or 'ant-design-vue/dist/antd.less'
+
 
 import instance_ from './api/index';
 
