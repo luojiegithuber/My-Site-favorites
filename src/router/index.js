@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import HelloWorld2 from '@/components/HelloWorld2'
+
 import Login from '@/components/Login'
 import Main from '@/components/Main'
 import portrait from '@/components/portrait'
-import hainan from '@/components/hainan'
+
 import HeadNav from '@/components/HeadNav'
 
 import bloglist from '@/components/bloglist'
@@ -16,16 +15,6 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/hello',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-		{
-		  path: '/HelloWorld2',
-		  name: 'HelloWorld2',
-		  component: HelloWorld2
-		},
     {
       path: '/Main',
       name: 'Main',
@@ -51,11 +40,7 @@ export default new Router({
       name: 'Login',
       component: Login,
     },
-    {
-      path: '/Hainan',
-      name: 'Hainan',
-      component: resolve => require(['../pages/Hainan.vue'], resolve),
-    },
+
     {
       path: '/BlogEditor',
       name: 'BlogEditor',
