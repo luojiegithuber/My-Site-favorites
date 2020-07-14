@@ -1,8 +1,6 @@
 <template>
   <div id="ml-home">
-    <!-- 机器学习平台
-    <characteristic-card title="帅气"></characteristic-card>
-    <characteristic-card title="美丽"></characteristic-card>  -->
+
     <a-layout-header ></a-layout-header>
 
         <a-layout class="ml-layout">
@@ -35,8 +33,7 @@
 </template>
 
 <script>
-import store from '@/store'
-//import CharacteristicCard from '../components/CharacteristicCard'
+
 import MLSiderMenu from '../components/MLSiderMenu'
 import MLBreadcrumb from '../components/MLBreadcrumb'
 import MLContent from '../components/mlcontent/MLContent'
@@ -58,9 +55,6 @@ export default {
     }
   },
   mounted(){
-
-    //全屏显示该平台  
-    store.dispatch('ChangeShowMode', true);
 
   },
   methods:{

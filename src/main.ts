@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -15,10 +15,9 @@ import 'mavon-editor/dist/css/index.css'
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/atom-one-dark.css'
 
-import { DatePicker } from 'ant-design-vue';
-Vue.use(DatePicker);
-
-//import 'ant-design-vue/dist/antd.css'; // or 'ant-design-vue/dist/antd.less'
+import Antd from 'ant-design-vue/es';
+import 'ant-design-vue/dist/antd.less';
+Vue.use(Antd);
 
 
 import instance_ from './api/index';
@@ -45,9 +44,9 @@ new Vue({
 
 })
 //在main.js定义自定义指令
-Vue.directive('highlight',function (el) {
-  let blocks = el.querySelectorAll('pre code');
-  blocks.forEach((block)=>{
-    hljs.highlightBlock(block)
-  })
-})
+// Vue.directive('highlight',function (el) {
+//   let blocks = el.querySelectorAll('pre code');
+//   blocks.forEach((block)=>{
+//     hljs.highlightBlock(block)
+//   })
+// })

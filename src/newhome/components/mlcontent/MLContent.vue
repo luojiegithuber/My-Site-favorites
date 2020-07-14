@@ -32,7 +32,6 @@ import VideoCourse from './VideoCourse'
 export default {
   name: 'MLContent',                                  
   components:{
-
     MLCharacteristicCards,
     VideoCourse,
   },

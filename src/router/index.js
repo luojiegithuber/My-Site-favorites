@@ -5,9 +5,6 @@ import Login from '@/components/Login'
 import Main from '@/components/Main'
 import portrait from '@/components/portrait'
 
-import HeadNav from '@/components/HeadNav'
-
-import bloglist from '@/components/bloglist'
 import touxiang from '@/components/touxiang'
 
 
@@ -50,6 +47,11 @@ export default new Router({
       path: '/DetailedBlog',
       name: 'DetailedBlog',
       component: resolve => require(['../pages/DetailedBlog.vue'], resolve),
-    }
+    },
+    {
+      path: '/NewHome',
+      name: 'NewHome',
+      component: resolve => require(['../newhome/home/MLHome.vue'], resolve),
+    },
   ]
 })
