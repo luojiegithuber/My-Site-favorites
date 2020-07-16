@@ -1,50 +1,41 @@
 <template>
   <div id="ml-sidermenu">
-    <a-menu
-      style="width: 100%"
-      :default-selected-keys="['1']"
-      :open-keys.sync="openKeys"
-      mode="inline"
-      @click="handleClick"
-      
-    >
-      <a-sub-menu key="sub1">
-        <span slot="title"><a-icon type="setting" /><span>特征工程</span></span>
-        <a-menu-item key="1-1">
-            离线特征仓库
-        </a-menu-item>
-        <a-menu-item key="1-2">
-            实时特征仓库
-        </a-menu-item>
-
-      </a-sub-menu>
-      <a-sub-menu key="sub2" @titleClick="titleClick">
-        <span slot="title"><a-icon type="mail" /><span>模型开发和训练</span></span>
-        <a-menu-item key="2-1">
-            Studio-可视化建模
-        </a-menu-item>
-        <a-menu-item key="2-2">
-            Notebook建模
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="sub3" @titleClick="titleClick">
-        <span slot="title"><a-icon type="appstore" /><span>模型管理</span></span>
-        <a-menu-item key="3-1">
-            模型列表
-        </a-menu-item>
-
-      </a-sub-menu>
-      <a-sub-menu key="sub4">
-        <span slot="title"><a-icon type="setting" /><span>模型部署</span></span>
-        <a-menu-item key="4-1">
-            在线模型推理服务
-        </a-menu-item>
-        <a-menu-item key="4-2">
-            离线模型推理服务
-        </a-menu-item>
-
-      </a-sub-menu>
-    </a-menu>
+    <el-menu
+      style="position:sticky;top:0px"
+      default-active="2"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose"
+      background-color="#545c64"
+      text-color="#fff"
+      default-openeds="['1','2']"
+      active-text-color="#00FFFF">
+      <el-submenu index="1">
+        <template slot="title" >
+          <i class="el-icon-location"></i>
+          <span style="font-size:1.2em;font-weight:bold;color:#E1FFFF">个人主页</span>
+        </template>
+        <el-menu-item index="1-1">技术博客</el-menu-item>
+        <el-menu-item index="1-2">生活板块</el-menu-item>
+        <el-menu-item index="1-3">个人画廊</el-menu-item>
+      </el-submenu>
+      <el-submenu index="2">
+        <template slot="title" >
+          <i class="el-icon-location"></i>
+          <span style="font-size:1.2em;font-weight:bold;color:#E1FFFF">网页收藏夹</span>
+        </template>
+        <el-menu-item index="2-1">全部</el-menu-item>
+        <el-menu-item index="2-2">学习</el-menu-item>
+        <el-menu-item index="2-3">生活</el-menu-item>
+        <el-menu-item index="2-4">前端</el-menu-item>
+        <el-menu-item index="2-5">社区</el-menu-item>
+        <el-menu-item index="2-6">其他</el-menu-item>
+      </el-submenu>
+      <el-menu-item index="3">
+        <i class="el-icon-setting"></i>
+        <span slot="title" style="font-size:1.2em;font-weight:bold;color:#E1FFFF">我的项目</span>
+      </el-menu-item>
+    </el-menu>
   </div>
 </template>
 
@@ -76,4 +67,7 @@ export default {
     color:	#A9A9A9;
 }
 
+.el-submenu__title{
+  justify-content: start;
+}
 </style>

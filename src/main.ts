@@ -15,9 +15,9 @@ import 'mavon-editor/dist/css/index.css'
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/atom-one-dark.css'
 
-import Antd from 'ant-design-vue/es';
+/*import Antd from 'ant-design-vue/es';
 import 'ant-design-vue/dist/antd.less';
-Vue.use(Antd);
+Vue.use(Antd);*/
 
 
 import instance_ from './api/index';

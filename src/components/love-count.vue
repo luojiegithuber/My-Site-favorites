@@ -1,6 +1,5 @@
 <template>
-  <el-card
-      style="margin-left: 20px;margin-top: 20px;border: 0;text-align: center;">
+  <div style="margin-left: 20px;margin-top: 20px;border: 0;text-align: center;">
       <el-progress
       type="circle"
       :percentage="percentage"
@@ -12,7 +11,7 @@
       <div :class="classHeart" @mousedown="down" @mouseup="end" @mouseleave="end"></div>
       <h3>长按送爱心❤</h3>
       <h4>已经收获的爱心数目：{{loveCount}}</h4>
-  </el-card>
+  </div>
 </template>
 
 <script>

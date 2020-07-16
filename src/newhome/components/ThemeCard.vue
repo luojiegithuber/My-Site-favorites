@@ -52,7 +52,7 @@ export default class CharacteristicCard extends Vue {
     @include center-shadow();
     background-color: white;
     padding:10px;
-    width: 100%;
+    width: 98%;
     height: 100%;
 }
 

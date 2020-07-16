@@ -10,7 +10,7 @@
               <span class="s-round-date"><span class="month">{{get_month(content.date)+'月'}}</span> <span class="day">{{get_day(content.date)}}</span></span>
               <el-row gutter=1>
               <el-col :span="18"><div >
-              <h3>{{content.title}}</h3>
+              <h3>&nbsp;&nbsp;&nbsp;{{content.title}}</h3>
               <!--
               <el-button style="float: right;margin-left: 10px;" type="danger" size='mini' icon="el-icon-delete" circle></el-button>
               <el-button style="float: right;" type="warning" size='mini' icon="el-icon-star-off" circle></el-button>

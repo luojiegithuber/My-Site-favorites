@@ -1,13 +1,14 @@
 <template>
   <div id="video-course">
-    <ThemeCard title="视频教程">
+    <ThemeCard title="好玩视频" >
         <div class="videos">
-        <img src='../../asset/img/实时与离线特征仓库.png' style='width:300px;height:200px'/>
-        <img src='../../asset/img/实时与离线特征仓库.png' style='width:300px;height:200px'/>
-        <img src='../../asset/img/实时与离线特征仓库.png' style='width:300px;height:200px'/>
-        <img src='../../asset/img/实时与离线特征仓库.png' style='width:300px;height:200px'/>
-        <img src='../../asset/img/实时与离线特征仓库.png' style='width:300px;height:200px'/>
-        <img src='../../asset/img/实时与离线特征仓库.png' style='width:300px;height:200px'/>
+        <img src='../../asset/img/实时与离线特征仓库.png' style='width:240px;height:180px'/>
+        <img src='../../asset/img/实时与离线特征仓库.png' style='width:240px;height:180px'/>
+        <img src='../../asset/img/实时与离线特征仓库.png' style='width:240px;height:180px'/>
+        <img src='../../asset/img/实时与离线特征仓库.png' style='width:240px;height:180px'/>
+        <img src='../../asset/img/实时与离线特征仓库.png' style='width:240px;height:180px'/>
+        <img src='../../asset/img/实时与离线特征仓库.png' style='width:240px;height:180px'/>
+
         </div>
     </ThemeCard>
   </div>
@@ -17,10 +18,12 @@
 
 import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
 import ThemeCard from '../ThemeCard.vue'
+import BlogList from '@/components/bloglist.vue'
 
 @Component({
     components:{
         ThemeCard,
+        BlogList
     }
 })
 export default class CharacteristicCard extends Vue {
@@ -56,10 +59,11 @@ export default class CharacteristicCard extends Vue {
 
 #video-course{
     background-color: white;
-    width: 100%;
+
 }
 
 .videos{
+    
     height: 450px;
     @include flex-center();
     flex-flow: wrap;

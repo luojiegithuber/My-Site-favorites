@@ -1,27 +1,20 @@
 <template>
-  <div id="my-ai">
-    <ThemeCard title="我的AI">
-        <div>
-            <a-menu v-model="current" mode="horizontal" style="display:flex;justify-content:space-between">
-                <a-menu-item > 可视化模型 </a-menu-item>
-                <a-menu-item > NoteBook模型 </a-menu-item>
-                <a-menu-item > 模型在线服务 </a-menu-item>
-            </a-menu>
-            <div>总实验数：<span>5</span></div>
-            <div>进行中实验数：<span>5</span></div>
-        </div>
-    </ThemeCard>
-  </div>
+    <div id="my-ai">
+        <my-card></my-card>
+    </div>
 </template>
 
 <script lang="ts">
 
 import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
 import ThemeCard from '../ThemeCard.vue'
+import MyCard from '@/components/mycard.vue'
+
 
 @Component({
     components:{
         ThemeCard,
+        MyCard
     }
 })
 export default class CharacteristicCard extends Vue {
@@ -54,7 +47,8 @@ export default class CharacteristicCard extends Vue {
 <style scoped lang='scss'>
 @import 'src/styles/mlcommon.scss';
 #my-ai{
- @include mycard;
+    @include mycard;
+    border-radius: 20px;
 }
 
 

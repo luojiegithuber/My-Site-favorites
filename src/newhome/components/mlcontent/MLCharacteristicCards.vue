@@ -1,20 +1,53 @@
 <template>
     <div id="character-cards">
         <div class="character-card">
-            <span>简单易用</span>
-            <span>封装现有机器学习与深度学习的方法,通过拖拽实现模型训练支持模型线上部署</span>
+            <br/>
+            <a href="https://www.bilibili.com/" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/哔哩哔哩.svg"/>
+            </a>
+            <span>bilibili网站</span>
+            <br/><br/><br/>
+            <a href="http://csujwc.its.csu.edu.cn/" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/学校.svg"/>
+            </a>
+            <span>中南大学教务系统</span>
         </div>
         <div class="character-card">
-            <span>低成本</span>
-            <span>支持GPU/CPU混合调度,高效资源复用,云上服务降低成本</span>
+            <br/>
+            <a href="https://cn.vuejs.org/v2/guide/" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/Vue.svg"/>
+            </a>
+            <span>Vue.js文档</span>
+            <br/><br/><br/>
+            <a href="https://react.docschina.org/docs/getting-started.html" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/React.svg"/>
+            </a>
+            <span>React.js文档</span>
+
         </div>
         <div class="character-card">
-            <span>高性能</span>
-            <span>支持高纬稀疏数据场景,超大规模深度模型训练;高效结构化压缩训练,加速练;interface模型压缩与量化,提升在线预测单机QP</span>
+            <br/>
+            <a href="https://www.webpackjs.com/concepts/" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/Webpack.svg"/>
+            </a>
+            <span>Webpack文档</span>
+             <br/><br/><br/>
+            <a href="www.baidu.com" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/js.svg"/>
+            </a>
+            <span>js的一些题目</span>
         </div>
         <div class="character-card">
-            <span>多项目特征</span>
-            <span>提供多项目,多主题特征库,随用随取,提高特征提取效率</span>
+            <br/>
+            <a href="www.baidu.com" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/switch.svg"/>
+            </a>
+            <span>Game栏目</span>
+             <br/><br/><br/>
+            <a href="https://www.nowcoder.com/" target="_blank">
+                <img  class="card-icon" src="../../asset/icon/牛.svg"/>
+            </a>
+            <span>牛客网</span>
         </div>
     </div>
 </template>
@@ -26,16 +59,23 @@
 #character-cards{
     width: 100%;
     @include flex-center();
+
+    font-weight: bold;
+    color:#3f3f3f
 }
 
 .character-card{
+    
+
     background: white;
-    width: 250px;
+    width: 200px;
     height:250px;
 
     padding: 10px;
 
     @include flex-center(column);
+    justify-content: start;
+
     @include center-shadow();
     
         // &:hover{
@@ -43,6 +83,11 @@
         // }
 }
 
+.card-icon{
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+}
 
 
 </style>

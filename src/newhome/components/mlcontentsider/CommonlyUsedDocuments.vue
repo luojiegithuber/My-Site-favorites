@@ -1,13 +1,6 @@
 <template>
   <div id="commonly-used-documents">
-    <ThemeCard title="常用文档"  :more="data.more">
-        <div>
-            <div v-for="(elem, index) in data.items" :key=index>
-                <a :href="elem.link_url"> {{ elem.name }} </a>  
-                <span style="float:right"> {{elem.createdAt}}</span>  
-            </div> 
-        </div>
-    </ThemeCard>
+    <love-count></love-count>
   </div>
 </template>
 
@@ -15,10 +8,12 @@
 
 import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
 import ThemeCard from '../ThemeCard.vue'
+import LoveCount from '@/components/love-count.vue'
 
 @Component({
     components:{
         ThemeCard,
+        LoveCount
     }
 })
 export default class CharacteristicCard extends Vue {
