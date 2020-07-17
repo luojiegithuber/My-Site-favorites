@@ -15,9 +15,9 @@ import 'mavon-editor/dist/css/index.css'
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlight.js/styles/atom-one-dark.css'
 
-/*import Antd from 'ant-design-vue/es';
-import 'ant-design-vue/dist/antd.less';
-Vue.use(Antd);*/
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
+Vue.use(Antd);
 
 
 import instance_ from './api/index';
@@ -33,6 +33,9 @@ Vue.use(mavonEditor)
 Vue.use(VueHighlightJS)
 
 Vue.config.productionTip = false
+
+
+Vue.prototype.bus=new Vue()//跨级传参 兄弟传参 中间件
 
 /* eslint-disable no-new */
 new Vue({

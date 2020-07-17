@@ -1,5 +1,5 @@
 <template>
-  <div id="commonly-used-documents">
+  <div id="my-love">
     <love-count></love-count>
   </div>
 </template>
@@ -16,7 +16,7 @@ import LoveCount from '@/components/love-count.vue'
         LoveCount
     }
 })
-export default class CharacteristicCard extends Vue {
+export default class MyLove extends Vue {
     welcome = 'Hello!';  
 
     print():void {
@@ -47,13 +47,13 @@ export default class CharacteristicCard extends Vue {
 <style scoped lang='scss'>
 @import 'src/styles/mlcommon.scss';
 
-#commonly-used-documents{
+#my-love{
     background-color: white;
     width: 100%;
     @include center-shadow();
 }
 
-#commonly-used-documents a{
+#my-love a{
     font-size: 1.1em;
 }
  

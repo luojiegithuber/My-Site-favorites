@@ -2,7 +2,7 @@
   <div id="ml-content-sider">
 
     <div class="cards-row">
-        <MyAI></MyAI> <!--我的AI-->
+        <MyCardContainer></MyCardContainer> <!--我的AI-->
     </div>
     <br/>
     <div class="cards-row">
@@ -19,14 +19,14 @@
 
 <script>
 
-import MyAI from './MyAI'
-import CommonlyUsedDocuments from './CommonlyUsedDocuments'
+import MyCardContainer from './MyCardContainer'
+import MyLove from './MyLove'
 import ProductDynamic from './ProductDynamic'
 
 export default {
   name: 'MLContentSider',                                  
   components:{
-    MyAI,
+    MyCardContainer,
     CommonlyUsedDocuments,
     ProductDynamic
 

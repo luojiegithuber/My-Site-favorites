@@ -1,0 +1,101 @@
+[33mcommit 4d9f980bc79091b04fc71d0f55bce6dccd98f813[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: luojie <1015779635@qq.com>
+Date:   Thu Jul 16 23:31:56 2020 +0800
+
+    新主页更新进度70%
+
+[33mcommit 678251540cc2785996a1ad0111a98b20c123ad53[m
+Author: luojie <1015779635@qq.com>
+Date:   Tue Jul 14 18:04:40 2020 +0800
+
+    ts
+
+[33mcommit 3670ca7731050210fb9dd2ee7aefe6500d88dab2[m
+Author: luojie <1015779635@qq.com>
+Date:   Fri Jul 10 18:28:05 2020 +0800
+
+    新界面的引入
+
+[33mcommit 07b1d04c85daa1565c9097e16230679f6e94a683[m
+Author: luojie <1015779635@qq.com>
+Date:   Tue Jul 7 08:47:57 2020 +0800
+
+    修改了导航栏样式
+
+[33mcommit 044949584854939c33e74e29f4afe749cd09284f[m
+Author: luojie <1015779635@qq.com>
+Date:   Sat May 23 02:25:01 2020 +0800
+
+    一键三连功能，界面大优化
+
+[33mcommit 8479e991f4ce1456841277625de8b81e7ad550ef[m
+Author: luojie <1015779635@qq.com>
+Date:   Fri May 22 18:56:38 2020 +0800
+
+    优化了博客界面，增加了顶部图片
+
+[33mcommit 392d82840e50b2e96ab65ae76671eccae66b5e3c[m
+Author: luojie <1015779635@qq.com>
+Date:   Sun May 17 15:50:57 2020 +0800
+
+    删去时间标记，增加访问权限
+
+[33mcommit 34117de49665af51bd31489a296edb97e10203df[m
+Author: luojie <1015779635@qq.com>
+Date:   Fri Apr 17 01:40:34 2020 +0800
+
+    完善分类功能，添加功能
+
+[33mcommit a32892e58813e744cb94d580e8da94e3a9716d85[m
+Author: luojie <1015779635@qq.com>
+Date:   Thu Apr 16 02:50:23 2020 +0800
+
+    大更新，增加了分类功能
+
+[33mcommit a5f715b2fe1a9b560d4a464e7443bad1276b42c4[m
+Author: luojie <1015779635@qq.com>
+Date:   Thu Apr 9 19:59:56 2020 +0800
+
+    增加疫情天眼菜单，增加个人信息外链，懒加载，左侧菜单更改
+
+[33mcommit fdb0c6ec768f24c0e71f257d710ba63b356015e5[m
+Author: luojie <1015779635@qq.com>
+Date:   Sun Feb 23 23:59:38 2020 +0800
+
+    基本完善了所有功能和用户体验
+
+[33mcommit 0c5b0d73ab28caba9421bee86845d870d41a0dec[m
+Author: luojie <1015779635@qq.com>
+Date:   Thu Feb 20 13:30:31 2020 +0800
+
+    博客可以提交图片了！
+
+[33mcommit 40a03b7e82f7d44fca47a4686668bbe5c083b411[m
+Author: luojie <1015779635@qq.com>
+Date:   Tue Feb 18 02:23:52 2020 +0800
+
+    爆肝大更新！增加了最主要的博客模式
+
+[33mcommit aeca49391ca83658903669bc4ee26d67dd623c96[m
+Author: luojie <1015779635@qq.com>
+Date:   Wed Feb 12 22:09:40 2020 +0800
+
+    增加了Vuex应用和疫情地图功能
+
+[33mcommit f67d86c72bf08d91390f9abeb45b6b2b7795659e[m
+Author: luojie <1015779635@qq.com>
+Date:   Mon Feb 10 15:42:07 2020 +0800
+
+    上传头像
+
+[33mcommit 1992ade44e8aa8f3a9c50e3a70f6aa35d193643b[m
+Author: luojie <1015779635@qq.com>
+Date:   Tue Jan 28 18:52:21 2020 +0800
+
+    基本完成项目功能的第一次提交
+
+[33mcommit beae319ccdb8119ba1c67dc025aad20db7b1896c[m
+Author: luojiegithuber <52662201+luojiegithuber@users.noreply.github.com>
+Date:   Tue Jan 28 18:47:58 2020 +0800
+
+    Initial commit

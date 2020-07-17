@@ -1,6 +1,6 @@
 <template>
-  <div id="product-dynamic">
-    <ThemeCard title="产品动态" :more="data.more">
+  <div id="recommended-read">
+    <ThemeCard title="推荐阅读" :more="data.more">
         <div>
             <div v-for="(elem, index) in data.items" :key=index>
                 <a :href="elem.link_url"> {{ elem.name }} </a>  
@@ -21,7 +21,7 @@ import ThemeCard from '../ThemeCard.vue'
         ThemeCard,
     }
 })
-export default class CharacteristicCard extends Vue {
+export default class RecommendedRead extends Vue {
     welcome = "hello";
 
     print():void {

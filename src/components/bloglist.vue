@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <div class="blog-list">
 
             <el-timeline style="padding-left:0 ;">
               <el-timeline-item placement="top" v-for="(content,index) in contents"
@@ -127,6 +127,8 @@
 </script>
 
 <style>
+
+
   h3{
     margin: 0;
     display: inline;

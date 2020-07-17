@@ -1,5 +1,5 @@
 <template>
-    <div id="my-ai">
+    <div id="my-card-container">
         <my-card></my-card>
     </div>
 </template>
@@ -17,7 +17,7 @@ import MyCard from '@/components/mycard.vue'
         MyCard
     }
 })
-export default class CharacteristicCard extends Vue {
+export default class MyCardContainer extends Vue {
     welcome = 'Hello!';  
 
     print():void {
@@ -46,7 +46,7 @@ export default class CharacteristicCard extends Vue {
 
 <style scoped lang='scss'>
 @import 'src/styles/mlcommon.scss';
-#my-ai{
+#my-card-container{
     @include mycard;
     border-radius: 20px;
 }
