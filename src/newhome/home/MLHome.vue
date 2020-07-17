@@ -9,7 +9,7 @@
                 <div class="ml-banner">
                     <div style="color:white;font-size:1.8em">欢迎来到我的个人空间</div>
                     <br/>
-                    <div style="color:rgba(255,255,255,0.8);width:60%;">一站式机器学习平台,包含两种建模方式, Notebook (集成jupyter)建模,适用于且备良好代码能力的算法开发人员和Studio (可视化建模)适用于应用算法建模的数据分析,数据产品人员。拥有强大稳定的大数据计算能力,提供模型训练与在线部考服务,满足各项目机器学习应用需求。</div>
+                    <div style="color:rgba(255,255,255,0.8);width:60%;">这里是本人的第二个首页，遗憾的是该页面尚未建设完成，您可以随便逛逛，如有需要请访问&nbsp;&nbsp;<a href="http://www.luojiework.cn/#/OldHome"><b>旧首页</b></a></div>
                 </div>
                 
                 <el-container style="height:100%;width:100%;padding:0px;">

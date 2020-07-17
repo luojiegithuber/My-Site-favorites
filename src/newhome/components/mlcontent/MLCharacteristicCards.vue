@@ -59,6 +59,7 @@
 #character-cards{
     width: 100%;
     @include flex-center();
+    justify-content: space-between;
 
     font-weight: bold;
     color:#3f3f3f

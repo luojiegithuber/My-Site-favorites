@@ -129,12 +129,12 @@
 <style>
 
 
-  h3{
+  .blog-list h3{
     margin: 0;
     display: inline;
   }
 
-  i{
+  .blog-list i{
     float: right;
   }
 
@@ -142,7 +142,7 @@
       position: absolute;
       top: -5px;
       left: -10px;
-      height: 60px;
+      height: 70px;
       width: 70px;
       padding-top: 10px;
       border-radius: 100px;

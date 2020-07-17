@@ -6,11 +6,11 @@
     </div>
     <br/>
     <div class="cards-row">
-        <CommonlyUsedDocuments :data="dataCommonlyUsedDocuments"></CommonlyUsedDocuments> <!--常用文档-->
+        <MyLove :data="dataCommonlyUsedDocuments"></MyLove> <!--常用文档-->
     </div>
     <br/>
     <div class="cards-row">
-        <ProductDynamic :data="dataProductDynamic"></ProductDynamic><!--产品动态-->
+        <RecommendedRead :data="dataProductDynamic"></RecommendedRead><!--产品动态-->
     </div>
 
 
@@ -21,14 +21,14 @@
 
 import MyCardContainer from './MyCardContainer'
 import MyLove from './MyLove'
-import ProductDynamic from './ProductDynamic'
+import RecommendedRead from './RecommendedRead'
 
 export default {
   name: 'MLContentSider',                                  
   components:{
     MyCardContainer,
-    CommonlyUsedDocuments,
-    ProductDynamic
+    MyLove,
+    RecommendedRead
 
   },
   data () {

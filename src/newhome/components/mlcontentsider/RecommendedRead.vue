@@ -51,8 +51,8 @@ export default class RecommendedRead extends Vue {
 
 <style scoped lang='scss'>
 @import 'src/styles/mlcommon.scss';
-#product-dynamic{
- @include mycard;
+#recommended-read{
+ width:100%;
 }
 
 

@@ -20,6 +20,11 @@ import 'ant-design-vue/dist/antd.css';
 Vue.use(Antd);
 
 
+
+import MyLayout from "./layout/MyLayout.vue"
+Vue.component('my-layout',MyLayout)
+
+
 import instance_ from './api/index';
 
 Vue.prototype.instance = instance_  //axios实例

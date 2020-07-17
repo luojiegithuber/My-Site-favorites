@@ -4,9 +4,9 @@
     <characteristic-card title="帅气"></characteristic-card>
     <characteristic-card title="美丽"></characteristic-card>  -->
     <div class="cards-row">
-        <div class="one-row-card" :style="{backgroundImage:rowImg1_1}">Gojs 血缘可视化</div>
-        <div class="one-row-card" :style="{backgroundImage:rowImg1_2}">React 猜颜色小游戏</div>
-        <div class="one-row-card" :style="{backgroundImage:rowImg1_3}">Echarts 疫情数据可视化</div>
+        <div class="one-row-card" @click="jump_blood()" :style="{backgroundImage:rowImg1_1}">Gojs 血缘可视化</div>
+        <div class="one-row-card" @click="jump_game()" :style="{backgroundImage:rowImg1_2}">React 猜颜色小游戏</div>
+        <div class="one-row-card" @click="jump_outbreak()" :style="{backgroundImage:rowImg1_3}">Echarts 疫情数据可视化</div>
     </div>
     <br/>
     <div class="cards-row">
@@ -14,7 +14,7 @@
     </div>
     <br/>
 
-    <div class="cards-row" style="border:1px solid 	#DCDCDC;max-height:1000px;overflow-y:scroll;padding-left:10px;padding-top:10px" >
+    <div class="cards-row" style="border:1px solid 	#DCDCDC;max-height:1000px;overflow-y:scroll;padding-left:10px;padding-top:10px;background-color: white;" >
         <BlogList style="width:100%"></BlogList>
     </div>
 
@@ -56,6 +56,16 @@ export default {
   },
   methods:{
 
+    jump_outbreak(){
+      window.open("http://www.luojiework.cn:8017/#/Home");
+    },
+    jump_game(){
+      window.open("http://www.luojiework.cn:8019");
+    },
+    jump_blood(){
+      window.open("http://www.luojiework.cn:8020/#/BloodHome");
+    },
+
   }
 }
 </script>
@@ -74,18 +84,22 @@ export default {
 
     display:flex;
     justify-content: space-between;
+
+    
 }
 
 .one-row-card{
  @include backImg();
- width: 250px;
- height: 125px;
+  padding-bottom: 20%;
+  width: 30%;
+  height: 0;
 
+cursor: pointer;
 
  color:#fff;
  text-align: center;
- line-height: 125px;
- font-size:1.2em;
+ line-height: 160px;
+ font-size:1.3em;
  font-weight: bold;
 
 }

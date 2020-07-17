@@ -28,7 +28,7 @@ export default new Router({
       component: portrait
     },
     {
-      path: '/',
+      path: '/OldHome',
       name: 'Blog',
       component: resolve => require(['../pages/Blog.vue'], resolve),
     },
@@ -49,9 +49,13 @@ export default new Router({
       component: resolve => require(['../pages/DetailedBlog.vue'], resolve),
     },
     {
-      path: '/NewHome',
+      path: '/',
       name: 'NewHome',
       component: resolve => require(['../newhome/home/MLHome.vue'], resolve),
+      meta:{
+        layout:'mylayout',
+        title:"首页"
+      }
     },
   ]
 })

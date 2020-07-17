@@ -1,6 +1,6 @@
 <template>
   <div id="video-course">
-    <ThemeCard :icon="icon" title="视频教程" :more="videoData.more">
+    <ThemeCard :icon="icon" title="个人视频" :more="videoData.more">
         <div class="videos" >
             <div class="video-preview" v-for="(video,key) in videoData.items " :key="key"  >
                 <div class="video-preview-picture" :style="{backgroundImage:'url('+video.picture_url+')'}">
@@ -9,6 +9,18 @@
                 <div style="background-color:white;text-align:center;height:40px;padding-top:10px">{{video.name}}</div>
             </div>
         </div>
+
+
+    <a-modal
+        title="Title"
+        :visible="visible"
+        :confirm-loading="confirmLoading"
+        @ok="handleOk"
+        @cancel="handleCancel"
+        width="900px"
+        >
+        <VideoPlayer v-if="visible"></VideoPlayer>
+    </a-modal>
     </ThemeCard>
   </div>
 </template>
@@ -17,52 +29,54 @@
 
 import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
 import ThemeCard from '../ThemeCard.vue'
-
+import VideoPlayer from './VideoPlayer.vue'
 
 @Component({
     components:{
         ThemeCard,
+        VideoPlayer
     }
 })
 export default class VideoCourse extends Vue {
+    visible:boolean = false;
     videoData:any = {
             "type": 3,
             "more": "https://www.ly.com/?refid=4140683",
             "items": [
                 {
-                    "name": "如何上传数据",
-                    "link_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.mp4?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909966517&Signature=FCMAZtiSapNpTa4aVJYHpDJ4M%2B8%3D",
-                    "picture_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.jpg?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909969241&Signature=HnobDwnBxoCzFqbVwHjpi3JWeQQ%3D",
+                    "name": "悲伤故事的杰克",
+                    "link_url": "http://www.luojiework.cn:3000/blogs/homevideo/悲伤故事的杰克.mp4",
+                    "picture_url": "http://www.luojiework.cn:3000/blogs/homevideo/悲伤故事的杰克.jpg",
                     "createdAt": "07月09日"
                 },
                 {
-                    "name": "如何搭建试验",
-                    "link_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.mp4?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909966517&Signature=FCMAZtiSapNpTa4aVJYHpDJ4M%2B8%3D",
-                    "picture_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.jpg?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909969241&Signature=HnobDwnBxoCzFqbVwHjpi3JWeQQ%3D",
+                    "name": "风扇细节",
+                    "link_url": "http://www.luojiework.cn:3000/blogs/homevideo/风扇细节.mp4",
+                    "picture_url": "http://www.luojiework.cn:3000/blogs/homevideo/风扇细节.jpg",
                     "createdAt": "07月09日"
                 },
                 {
-                    "name": "如何使用社区分享功能",
-                    "link_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.mp4?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909966517&Signature=FCMAZtiSapNpTa4aVJYHpDJ4M%2B8%3D",
-                    "picture_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.jpg?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909969241&Signature=HnobDwnBxoCzFqbVwHjpi3JWeQQ%3D",
+                    "name": "杰克和小玉的舞台剧",
+                    "link_url": "http://www.luojiework.cn:3000/blogs/homevideo/杰克和小玉的舞台剧.mp4",
+                    "picture_url": "http://www.luojiework.cn:3000/blogs/homevideo/杰克和小玉的舞台剧.jpg",
                     "createdAt": "07月13日"
                 },
                 {
-                    "name": "如何上传数据2",
-                    "link_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.mp4?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909966517&Signature=FCMAZtiSapNpTa4aVJYHpDJ4M%2B8%3D",
-                    "picture_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.jpg?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909969241&Signature=HnobDwnBxoCzFqbVwHjpi3JWeQQ%3D",
+                    "name": "偶像的钢琴曲",
+                    "link_url": "http://www.luojiework.cn:3000/blogs/homevideo/偶像的钢琴曲.mp4",
+                    "picture_url": "http://www.luojiework.cn:3000/blogs/homevideo/偶像的钢琴曲.jpg",
                     "createdAt": "07月13日"
                 },
                 {
-                    "name": "如何创建实验2",
-                    "link_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.mp4?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909966517&Signature=FCMAZtiSapNpTa4aVJYHpDJ4M%2B8%3D",
-                    "picture_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.jpg?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909969241&Signature=HnobDwnBxoCzFqbVwHjpi3JWeQQ%3D",
+                    "name": "烫嘴的歌词",
+                    "link_url": "http://www.luojiework.cn:3000/blogs/homevideo/烫嘴的歌词.mp4",
+                    "picture_url": "http://www.luojiework.cn:3000/blogs/homevideo/烫嘴的歌词.jpg",
                     "createdAt": "07月13日"
                 },
                 {
-                    "name": "如何使用社区分享功能2",
-                    "link_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.mp4?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909966517&Signature=FCMAZtiSapNpTa4aVJYHpDJ4M%2B8%3D",
-                    "picture_url": "http://tcstore1.17usoft.com/mlvideo/d7d8cdf4-4b77-45ea-aed6-81175ae42aa2.jpg?AWSAccessKeyId=DI788HJTIHAPDAIUW0P7&Expires=1909969241&Signature=HnobDwnBxoCzFqbVwHjpi3JWeQQ%3D",
+                    "name": "虚伪的音乐家",
+                    "link_url": "http://www.luojiework.cn:3000/blogs/homevideo/虚伪的音乐家.mp4",
+                    "picture_url": "http://www.luojiework.cn:3000/blogs/homevideo/虚伪的音乐家.jpg",
                     "createdAt": "07月13日"
                 }
             ]
@@ -77,10 +91,12 @@ export default class VideoCourse extends Vue {
     }
 
     jumpVideo(){
-        if(event){
-            console.log(event.target)
-        }
-        
+        this.visible = true;
+    }
+
+    handleOk(){}
+    handleCancel(){
+        this.visible = false;
     }
 
 
@@ -121,7 +137,8 @@ export default class VideoCourse extends Vue {
 
 .video-preview{
     background-color:#000;
-    height:240px;
+    width: 30%;
+    height:40%;
 }
 
 .video-preview i{
@@ -137,8 +154,8 @@ export default class VideoCourse extends Vue {
 .video-preview-picture{
     
     @include backImg;
-    width:300px;
-    height:200px;
+    width:100%;
+    height:100%;
     
     opacity:0.8;
 
@@ -150,4 +167,6 @@ export default class VideoCourse extends Vue {
 .video-preview-picture:hover{
     opacity:1 //移动到上面图片会变亮
 }
+
+
 </style>
