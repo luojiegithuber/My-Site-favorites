@@ -4,22 +4,22 @@
         <div class="videos" >
             <div class="video-preview" v-for="(video,key) in videoData.items " :key="key"  >
                 <div class="video-preview-picture" :style="{backgroundImage:'url('+video.picture_url+')'}">
-                    <a-icon type="play-circle" @click="jumpVideo()"/>
+                    <a-icon type="play-circle" @click="jumpVideo(video)"/>
                 </div>
                 <div style="background-color:white;text-align:center;height:40px;padding-top:10px">{{video.name}}</div>
             </div>
         </div>
 
 
-    <a-modal
-        title="Title"
+        <a-modal
+        :title="curVideo.name"
         :visible="visible"
         :confirm-loading="confirmLoading"
         @ok="handleOk"
         @cancel="handleCancel"
         width="900px"
         >
-        <VideoPlayer v-if="visible"></VideoPlayer>
+        <VideoPlayer v-if="visible" :curVideo="curVideo"></VideoPlayer>
     </a-modal>
     </ThemeCard>
   </div>
@@ -39,6 +39,7 @@ import VideoPlayer from './VideoPlayer.vue'
 })
 export default class VideoCourse extends Vue {
     visible:boolean = false;
+    curVideo:any = {};
     videoData:any = {
             "type": 3,
             "more": "https://www.ly.com/?refid=4140683",
@@ -90,11 +91,15 @@ export default class VideoCourse extends Vue {
         });
     }
 
-    jumpVideo(){
+    jumpVideo(video:any){
+        this.curVideo = video;
         this.visible = true;
+        console.log(this.curVideo);
     }
 
-    handleOk(){}
+    handleOk(){
+        this.visible = false;
+    }
     handleCancel(){
         this.visible = false;
     }

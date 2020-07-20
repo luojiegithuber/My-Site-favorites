@@ -3,7 +3,7 @@
 
 
       <el-container style="overflow: auto;">
-        <el-aside width="350px" >
+        <el-aside width="350px" style="padding:20px" >
           <my-card></my-card>
 
           <my-love></my-love>

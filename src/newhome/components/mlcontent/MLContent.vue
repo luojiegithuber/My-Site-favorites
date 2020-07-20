@@ -45,9 +45,9 @@ export default {
   },
   data () {
     return {
-        rowImg1_1:"url(" + require("../../asset/img/实时与离线特征仓库.png") + ")",
-        rowImg1_2:"url(" + require("../../asset/img/Notebook交互式编程建模.png") + ")",
-        rowImg1_3:"url(" + require("../../asset/img/Studio可视化拖拽建模.png") + ")",
+        rowImg1_1:"url(" + require("../../asset/img/数据血缘.jpg") + ")",
+        rowImg1_2:"url(" + require("../../asset/img/猜颜色.jpg") + ")",
+        rowImg1_3:"url(" + require("../../asset/img/疫情.jpg") + ")",
     }
   },
   mounted(){
@@ -89,18 +89,18 @@ export default {
 }
 
 .one-row-card{
- @include backImg();
+  @include backImg();
   padding-bottom: 20%;
-  width: 30%;
+  width: 32%;
   height: 0;
 
-cursor: pointer;
+  cursor: pointer;
 
- color:#fff;
- text-align: center;
- line-height: 160px;
- font-size:1.3em;
- font-weight: bold;
+  color:#fff;
+  text-align: center;
+  line-height: 190px;
+  font-size:1.4em;
+  font-weight: bold;
 
 }
 

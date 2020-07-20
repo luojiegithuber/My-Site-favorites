@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-left: 20px;margin-top: 20px;border: 0;text-align: center;">
+  <div id="mylove-count-container">
       <el-progress
       type="circle"
       :percentage="percentage"
@@ -94,10 +94,14 @@
 
 <style>
 
-.love_count{
-  height:250px;
-  background-color: #fff;
+#mylove-count-container{
+  cursor:pointer;
+  margin-top: 20px;
+  border: 0;
+  text-align: center;
+  background-color: white
 }
+
 
 .heart_gray{
   height:50px;
@@ -119,5 +123,6 @@
   margin: 0 auto;
   position: relative;
   top:-90px;
+
 }
 </style>

@@ -69,7 +69,7 @@
     
 
     background: white;
-    width: 200px;
+    width: 24%;
     height:250px;
 
     padding: 10px;

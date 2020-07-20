@@ -4,9 +4,9 @@
         class="video-js"
         controls
         preload="auto"
-        poster="http://www.luojiework.cn:3000/blogs/homevideo/悲伤故事的杰克.jpg"
+        :poster="curVideo.picture_url"
         data-setup='{}'>
-    <source src="http://www.luojiework.cn:3000/blogs/homevideo/悲伤故事的杰克.mp4" type="video/mp4"/>
+    <source :src="curVideo.link_url" type="video/mp4"/>
     </video>
   </div>
 </template>
@@ -18,11 +18,7 @@ import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-p
 @Component({})
 export default class MyVideoPlayer extends Vue {
 
-    mounted(){
-        console.log("单独视频数据",this.videoData);
-    }
-
-    @Prop({})videoData !: any;
+    @Prop({})curVideo !: any;
 
     constructor() {
       super();
@@ -35,16 +31,11 @@ export default class MyVideoPlayer extends Vue {
 <style scoped lang='scss'>
 @import 'src/styles/mlcommon.scss';
 
-.my-player {
-    width:800px;
-    height:600px;
-}
 
 .video-js{
-    width:800px;
-    height:600px;
+    width:100%;
+    height:100%;
 }
-
 
 
 </style>
