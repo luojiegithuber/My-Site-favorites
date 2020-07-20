@@ -1,9 +1,7 @@
 <template>
  <div class="main">
 
-
-
- <el-container style="height: 75%; border: 1px solid #eee">
+<!-- <el-container style="height: 75%; border: 1px solid #eee">
    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
  <el-menu
       default-active="1"
@@ -53,7 +51,7 @@
     </el-menu>
    </el-aside>
 
-   <el-container>
+   <el-container>-->
      <el-dialog title="新增网址收藏" :visible.sync="dialogFormVisible">
        <el-form :model="form">
          <el-form-item label="网址URL" :label-width="formLabelWidth">
@@ -136,7 +134,7 @@
                </template>
              </el-table-column>
 
-       </el-table>
+       </el-table><br/>
        <div class="pagination">
             <el-pagination
                @size-change="handleSizeChange"
@@ -150,9 +148,9 @@
        </div>
 
      </el-main>
-   </el-container>
+   <!--</el-container>-->
 
- </el-container>
+ <!--</el-container>-->
 
  </div>
 </template>
@@ -216,8 +214,6 @@
                     return this.urlData.filter(data => {
                         return data.__v==this.tag_name
                     })
-
-
                 }
 
                 if (search) {
@@ -243,8 +239,32 @@
 
       },//computed
 
-
-
+      beforeCreate() {
+        this.bus.$on("toCollection", msg => {
+          switch (msg) {
+            case '全部':
+              this.getAllSite();
+              break;
+            case '工具':
+              this.getTool();
+              break;
+            case '学习':
+              this.getStudy();
+              break;
+            case '前端':
+              this.getWeb();
+              break;
+            case '生活':
+              this.getLife();
+              break;
+            case '其他':
+              this.getOther();
+              break;
+            default:
+              break;
+          }
+        });
+      },
       methods: {
 
         //判断增加的操作权限

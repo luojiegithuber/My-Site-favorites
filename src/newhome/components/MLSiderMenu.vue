@@ -1,15 +1,16 @@
 <template>
   <div id="ml-sidermenu">
     <a-menu
-      style="width: 120%"
-      :default-selected-keys="['1']"
-      :open-keys.sync="openKeys"
+      style="width: 100%"
+
+      :open-keys="openKeys"
       theme="dark"
       mode="inline"
       @click="handleClick"
+      @openChange="onOpenChange"
       
     >
-      <a-sub-menu key="sub1">
+      <a-sub-menu key="sub1" @titleClick="titleClick">
         <span slot="title"><a-icon type="user" /><span>个人空间</span></span>
         <a-menu-item key="1-1">
             技术博客
@@ -24,25 +25,25 @@
       </a-sub-menu>
       <a-sub-menu key="sub2" @titleClick="titleClick">
         <span slot="title"><a-icon type="mail" /><span>网页收藏夹</span></span>
-        <a-menu-item key="2-1">
+        <a-menu-item key="全部">
             全部
         </a-menu-item>
-        <a-menu-item key="2-2" >
+        <a-menu-item key="工具" >
             工具
         </a-menu-item>
-        <a-menu-item key="2-3">
+        <a-menu-item key="学习">
             学习
         </a-menu-item>
-        <a-menu-item key="2-4" >
+        <a-menu-item key="前端" >
             前端
         </a-menu-item>
-        <a-menu-item key="2-5">
+        <a-menu-item key="生活">
             生活
         </a-menu-item>
-        <a-menu-item key="2-6" >
+        <a-menu-item key="其他" >
             其他
         </a-menu-item>
-        <a-menu-item key="2-7" >
+        <a-menu-item key="社区" >
             社区
         </a-menu-item>
       </a-sub-menu>
@@ -59,7 +60,7 @@
         </a-menu-item>
 
       </a-sub-menu>
-      <a-sub-menu key="sub4">
+      <a-sub-menu key="sub4" @titleClick="titleClick">
         <span slot="title"><a-icon type="setting" /><span>还没想好干嘛</span></span>
         <a-menu-item key="4-1">
             提个建议呗
@@ -77,6 +78,7 @@
 export default {
   data() {
     return {
+      rootSubmenuKeys: ['sub1', 'sub2', 'sub3','sub4'],
       current: ['mail'],
       openKeys: ['sub1'],
     };
@@ -84,15 +86,61 @@ export default {
   watch: {
     openKeys(val) {
       console.log('openKeys', val);
+
     },
   },
   methods: {
     handleClick(e) {
-      console.log('click', e);
+      console.log('click', e.key);
+      switch (e.key) {
+        case '全部':
+          this.bus.$emit("toCollection", '全部');
+          break;
+        case '工具':
+          this.bus.$emit("toCollection", '工具');
+          break;
+        case '学习':
+          this.bus.$emit("toCollection", '学习');
+          break;
+        case '前端':
+          this.bus.$emit("toCollection", '前端');
+          break;
+        case '生活':
+          this.bus.$emit("toCollection", '生活');
+          break;
+        case '其他':
+          this.bus.$emit("toCollection", '其他');
+          break;
+        default:
+          break;
+      }
     },
     titleClick(e) {
-      console.log('titleClick', e);
+      console.log('titleClick', e.key);
+
+      switch (e.key) {
+        case 'sub1':
+          this.$router.push({name:'Blog'});
+          break;
+
+        case 'sub2':
+          this.$router.push({name:'Main'});
+          break;
+      
+        default:
+          break;
+      }
     },
+    onOpenChange(openKeys) {
+      const latestOpenKey = openKeys.find(key => this.openKeys.indexOf(key) === -1);
+      if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
+        this.openKeys = openKeys;
+      } else {
+        this.openKeys = latestOpenKey ? [latestOpenKey] : [];
+      }
+
+    },
+
   },
 };
 </script>

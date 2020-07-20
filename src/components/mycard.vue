@@ -46,7 +46,7 @@
 
 
 #my-card{
-  width:320px;
+  width:100%;
   height:450px;
 
   text-align: center;

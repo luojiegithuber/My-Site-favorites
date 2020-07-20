@@ -28,7 +28,7 @@ export default new Router({
       component: portrait
     },
     {
-      path: '/OldHome',
+      path: '/Blog',
       name: 'Blog',
       component: resolve => require(['../pages/Blog.vue'], resolve),
     },

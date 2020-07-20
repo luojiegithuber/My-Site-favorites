@@ -9,15 +9,15 @@
             <el-aside style="width:15%;">
                 <MLSiderMenu style="position: fixed;width:220px"></MLSiderMenu>
             </el-aside>
-            <el-main  style="padding:0px;width:65%;overflow:hidden">
+            <el-main  style="padding:0px;width:65%;overflow: visible">
                 <div class="ml-banner">
                     <div style="color:white;font-size:1.8em">欢迎来到我的个人空间</div>
                     <br/>
-                    <div style="color:rgba(255,255,255,0.8);width:60%;">这里是本人的第二个首页，遗憾的是该页面尚未建设完成，您可以随便逛逛，如有需要请访问&nbsp;&nbsp;<a href="http://www.luojiework.cn/#/OldHome"><b>旧首页</b></a></div>
+                    <div style="color:rgba(255,255,255,0.8);width:60%;">这里是本人的第二个首页，但是建设尚未完成，所以请多多包涵</div>
                 </div>
                 
-                <el-container style="height:100%;width:100%;padding:0px;">
-                    <el-main style="padding:0px;height:100%;flex-basis:1100px;max-width:2000px;width:75%;">
+                <el-container style="width:100%;padding:0px;">
+                    <el-main style="padding:0px;height:100%;flex-basis:1100px;max-width:2000px;width:75%;overflow: visible">
                         <router-view/>
                     </el-main>
                     <el-aside style="padding:0px;height:100%;flex-basis:350px;max-width:2000px;width:30%">
@@ -26,10 +26,12 @@
                 </el-container>
                 
             </el-main>
+
+            
         </el-container>
-        
+        <el-footer style="background-color:#121935"></el-footer>
     </div>
-    <el-footer style="background-color:#121935"></el-footer>
+      
   </div>
 </template>
 
@@ -51,7 +53,7 @@ export default {
   },
   name: 'App',
   updated(){
-      document.querySelector("#head").scrollIntoView(true)
+
   }
 }
 </script>
