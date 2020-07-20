@@ -20,7 +20,8 @@ const store=new Vuex.Store({
        isLogin:Boolean(false),
        level:1,
        newBlogForm:[],
-       newBlogImgs:[]
+       newBlogImgs:[],
+       showLayoutItem:[1,2,3],
      },
      getters:{//类似于Vue的computed
        computedFull:function(state){
@@ -48,7 +49,11 @@ const store=new Vuex.Store({
 
        addNewBlogImgs(state,data_newBlogImg){//传参数
          state.newBlogImgs=data_newBlogImg
-       }
+       },
+
+       changeShowLayoutItem(state,numArr){//传参数
+        state.showLayoutItem = numArr
+      }
 
      },
      //*********************************************************/
@@ -68,6 +73,10 @@ const store=new Vuex.Store({
 
        addNewBlogFormFun(context,data_newBlogForm){
          context.commit("addNewBlogForm",data_newBlogForm)
+       },
+
+       changeShowLayoutItemFun(context,numArr){
+        context.commit("changeShowLayoutItem",numArr)
        },
 
        //上传登录状态

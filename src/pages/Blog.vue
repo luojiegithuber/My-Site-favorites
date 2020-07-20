@@ -1,27 +1,7 @@
 <template>
- <el-container style="background: #b3e8e4;">
-
-
-      <el-container style="overflow: auto;">
-        <el-aside width="350px" style="padding:20px" >
-          <my-card></my-card>
-
-          <my-love></my-love>
-          
-          <br/><br/>
-
-          <my-specter></my-specter>
-        </el-aside>
-
-        <el-container>
-          <el-main>
-            <my-bloglist></my-bloglist>
-          </el-main>
-
-        </el-container>
-      </el-container>
-
-    </el-container>
+  <div id="blog-list">
+    <my-bloglist></my-bloglist>
+  </div>
 </template>
 
 <script>
@@ -50,6 +30,10 @@
 
 
     created() {
+
+      this.$store.dispatch("changeShowLayoutItemFun",[1,2]);
+      console.log(this.$store.showLayoutItem);
+
       if (localStorage.getItem("userMsg")) {
 
          this.$store.replaceState(Object.assign({}, this.$store.state,JSON.parse(localStorage.getItem("userMsg"))))
@@ -62,5 +46,9 @@
 </script>
 
 <style>
+
+#blog-list{
+  overflow:visible;
+}
 
 </style>

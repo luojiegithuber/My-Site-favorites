@@ -132,6 +132,7 @@
   .blog-list h3{
     margin: 0;
     display: inline;
+    font-weight: bold;
   }
 
   .blog-list i{
@@ -148,6 +149,7 @@
       border-radius: 100px;
       color: #fff;
       background: #759aff;
+
   }
 
   .s-round-date span {

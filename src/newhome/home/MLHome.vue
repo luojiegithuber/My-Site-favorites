@@ -1,7 +1,7 @@
 <template>
   <div id="ml-home">
 
-        <el-container class="ml-layout">
+        <!-- <el-container class="ml-layout">
             <el-aside style="width:15%;">
                 <MLSiderMenu style="position: fixed;width:220px"></MLSiderMenu>
             </el-aside>
@@ -13,9 +13,9 @@
                 </div>
                 
                 <el-container style="height:100%;width:100%;padding:0px;">
-                    <el-main style="padding:0px;height:100%;flex-basis:1100px;max-width:2000px;width:75%">
+                    <el-main style="padding:0px;height:100%;flex-basis:1100px;max-width:2000px;width:75%"> -->
                        <MLContent></MLContent>
-                    </el-main>
+                    <!-- </el-main>
                     <el-aside style="padding:0px;height:100%;flex-basis:350px;max-width:2000px;width:30%">
                         <MLContentSider></MLContentSider>
                     </el-aside>
@@ -23,26 +23,26 @@
                 
             </el-main>
 
-        </el-container>
+        </el-container> -->
 
   </div>
 </template>
 
 <script>
 
-import MLSiderMenu from '../components/MLSiderMenu'
-import MLBreadcrumb from '../components/MLBreadcrumb'
-import MLContent from '../components/mlcontent/MLContent'
-import MLContentSider from '../components/mlcontentsider/MLContentSider'
+// import MLSiderMenu from '../components/MLSiderMenu'
+// import MLBreadcrumb from '../components/MLBreadcrumb'
+ import MLContent from '../components/mlcontent/MLContent'
+// import MLContentSider from '../components/mlcontentsider/MLContentSider'
 
 
 export default {
   name: 'MLHome',                                  
   components:{
-    MLSiderMenu,
-    MLBreadcrumb,
-    MLContent,
-    MLContentSider,
+    // MLSiderMenu,
+    // MLBreadcrumb,
+     MLContent,
+    // MLContentSider,
 
   },
   data () {
@@ -63,31 +63,31 @@ export default {
 <style scoped lang='scss'>
 @import 'src/styles/mlcommon.scss';
 
-#ml-home{
-    height: 100vh;
-    background-color: red;
+// #ml-home{
+//     height: 100vh;
+//     background-color: red;
 
-}
-.ml-layout{
-    width: 100%;
-    height:100%;
-    margin: 0 auto;
+// }
+// .ml-layout{
+//     width: 100%;
+//     height:100%;
+//     margin: 0 auto;
 
-    background-color: rgb(226, 226, 226);
-}
-//src="../asset/banner.png" style="width:100%;height:200px"
-.ml-banner{
-    @include backImg();
-    background-image: url("../asset/img/banner.png");
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+//     background-color: rgb(226, 226, 226);
+// }
+// //src="../asset/banner.png" style="width:100%;height:200px"
+// .ml-banner{
+//     @include backImg();
+//     background-image: url("../asset/img/banner.png");
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
 
-    padding: 20px;
+//     padding: 20px;
     
-    width: 100%;
-    height: 250px;
-}
+//     width: 100%;
+//     height: 250px;
+// }
 
 
 </style>

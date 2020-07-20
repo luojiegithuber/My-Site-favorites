@@ -1,7 +1,7 @@
 <template>
   <div id="ml-sidermenu">
     <a-menu
-      style="width: 100%"
+      style="width: 120%"
       :default-selected-keys="['1']"
       :open-keys.sync="openKeys"
       theme="dark"
