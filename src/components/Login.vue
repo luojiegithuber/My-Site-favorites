@@ -1,16 +1,17 @@
 <template>
 
-  <div class="login">
-    <my-portrait></my-portrait>
-      <div>
-        <h1>{{this.$store.state.username}}的等级：LV.{{this.$store.state.isLogin}}</h1>
-        <el-input style="width: 300px" size="medium" placeholder="请输入用户名" v-model="name" clearable class="input_style"></el-input>
-      </div>
-      <div>
-        <el-input style="width: 300px" size="medium" placeholder="请输入密码" v-model="password" show-password class="input_style"></el-input>
-      </div>
-      <div>
-        <el-button type="primary" @click="login2" class="login_style">登录</el-button>
+  <div class="login-container">
+    <div id="login-card">
+        <my-portrait></my-portrait>
+        <div>
+          <el-input style="width: 300px" size="medium" placeholder="请输入用户名" v-model="name" clearable class="input_style"></el-input>
+        </div>
+        <div>
+          <el-input style="width: 300px" size="medium" placeholder="请输入密码" v-model="password" show-password class="input_style"></el-input>
+        </div>
+        <div>
+          <el-button type="primary" @click="login2" class="login_style">登录</el-button>
+        </div>
       </div>
   </div>
 </template>
@@ -34,7 +35,9 @@
         'my-portrait':portrait
       },
 
-
+      beforeCreate(){
+        this.$store.dispatch("changeShowLayoutItemFun",[1,null,3]);
+      },
 
       methods:{
 
@@ -82,10 +85,28 @@
 
 </script>
 
-<style>
-    .login{
-      margin-top: 200px;
+<style scoped lang='scss'>
+@import 'src/styles/mlcommon.scss';
+
+    .login-container{
+      height: 100vh;
+      width: 100%;
+      background-color: white;
+      position: relative;
     }
+
+    #login-card{
+      @include center-shadow();
+      width:500px;
+      height: 500px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -250px 0 0 -250px;;
+
+      @include flex-center(column)
+    }
+    
     .input_style{
       width: 200px;
       margin-bottom: 10px;

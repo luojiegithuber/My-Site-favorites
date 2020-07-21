@@ -1,6 +1,6 @@
 <template>
   <div>
-   <h1 style="font-size:150%">{{title}}</h1>
+   <h1 style="font-size:1.5em;font-weight:bold;text-align:center;padding:5px">{{title}}</h1>
    <el-divider>
      <i class="el-icon-mobile-phone"></i>
    </el-divider>

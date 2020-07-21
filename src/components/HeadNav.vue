@@ -9,8 +9,8 @@
         background-color="rgba(44,62,80,0.9)"
         text-color="#fff"
         active-text-color="#00FFFF">
-          <el-menu-item index="1" @click="jump_blog()" >我的博客</el-menu-item>
-          <el-menu-item index="2" @click="jump_collect()">网络收藏夹</el-menu-item>
+          <el-menu-item index="1" @click="jump_home()" >首页</el-menu-item>
+          <!-- <el-menu-item index="2" @click="jump_collect()">网络收藏夹</el-menu-item>
 
 
           <el-submenu index="3">
@@ -18,10 +18,10 @@
             <el-menu-item index="3-1" @click="jump_blood()">Go.js数据血缘</el-menu-item>
             <el-menu-item index="3-2" @click="jump_game()">React猜颜色</el-menu-item>
             <el-menu-item index="3-3" @click="jump_outbreak()">Echarts疫情天眼</el-menu-item>
-          </el-submenu>
+          </el-submenu> -->
+          <el-menu-item index="5" @click="jump_login()" style="float:right">登录</el-menu-item>
+          <el-menu-item index="4" @click="jump_editor()" style="float:right">写博客</el-menu-item>
 
-          <el-menu-item index="4" @click="jump_editor()">写博客</el-menu-item>
-          <el-menu-item index="5" @click="jump_login()">登录</el-menu-item>
         </el-menu>
    </div>
 </template>
@@ -34,9 +34,8 @@
         };
       },
       methods: {
-
-        jump_hainan(){
-          this.$router.push({name:'Hainan'});
+        jump_home(){
+          this.$router.push({name:'NewHome'});
         },
         jump_collect(){
           this.$router.push({name:'Main'});
@@ -50,15 +49,15 @@
         jump_login(){
           this.$router.push({name:'Login'});
         },
-        jump_outbreak(){
-          window.open("http://www.luojiework.cn:8017/#/Home");
-        },
-        jump_game(){
-          window.open("http://www.luojiework.cn:8019");
-        },
-        jump_blood(){
-          window.open("http://www.luojiework.cn:8020/#/BloodHome");
-        },
+        // jump_outbreak(){
+        //   window.open("http://www.luojiework.cn:8017/#/Home");
+        // },
+        // jump_game(){
+        //   window.open("http://www.luojiework.cn:8019");
+        // },
+        // jump_blood(){
+        //   window.open("http://www.luojiework.cn:8020/#/BloodHome");
+        // },
 
         handleSelect(key, keyPath) {
           console.log(key, keyPath);

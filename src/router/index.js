@@ -17,16 +17,16 @@ export default new Router({
       name: 'Main',
       component: Main
     },
-    {
-      path: '/Touxiang',
-      name: 'Touxiang',
-      component: touxiang
-    },
-    {
-      path: '/portrait',
-      name: 'portrait',
-      component: portrait
-    },
+    // {
+    //   path: '/Touxiang',
+    //   name: 'Touxiang',
+    //   component: touxiang
+    // },
+    // {
+    //   path: '/portrait',
+    //   name: 'portrait',
+    //   component: portrait
+    // },
     {
       path: '/Blog',
       name: 'Blog',

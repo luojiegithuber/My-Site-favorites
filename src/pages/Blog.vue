@@ -28,11 +28,13 @@
       };
     },
 
+    beforeCreate(){
+      this.$store.dispatch("changeShowLayoutItemFun",[1,2,3]);
+    },
 
     created() {
 
-      this.$store.dispatch("changeShowLayoutItemFun",[1,2]);
-      console.log(this.$store.showLayoutItem);
+
 
       if (localStorage.getItem("userMsg")) {
 

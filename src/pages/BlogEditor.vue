@@ -67,6 +67,10 @@ export default {
         };
     },
 
+    beforeCreate(){
+      this.$store.dispatch("changeShowLayoutItemFun",[]);//只保留顶部栏
+    },
+
 
     methods:{
       change (e) {

@@ -240,6 +240,10 @@
       },//computed
 
       beforeCreate() {
+
+        this.$store.dispatch("changeShowLayoutItemFun",[1,2,3]);
+
+
         this.bus.$on("toCollection", msg => {
           switch (msg) {
             case '全部':
