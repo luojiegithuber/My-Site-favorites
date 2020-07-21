@@ -240,10 +240,6 @@
       },//computed
 
       beforeCreate() {
-
-        this.$store.dispatch("changeShowLayoutItemFun",[1,2,3]);
-
-
         this.bus.$on("toCollection", msg => {
           switch (msg) {
             case '全部':
@@ -424,6 +420,9 @@
 </script>
 
 <style>
+.main{
+  width:100%;
+}
 
 
     .el-header {

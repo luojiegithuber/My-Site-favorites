@@ -23,8 +23,8 @@
           </el-col>
       </el-row>
       </div>
-        <div style="height:80%">
-          <mavon-editor :ishljs = "true" v-model="value" ref=md @imgAdd="$imgAdd" @imgDel="$imgDel" />
+        <div style="height:100vh">
+          <mavon-editor style="height:100%" :ishljs = "true" v-model="value" ref=md @imgAdd="$imgAdd" @imgDel="$imgDel" />
         </div>
 <!--
             <mavon-editor
@@ -67,9 +67,6 @@ export default {
         };
     },
 
-    beforeCreate(){
-      this.$store.dispatch("changeShowLayoutItemFun",[]);//只保留顶部栏
-    },
 
 
     methods:{

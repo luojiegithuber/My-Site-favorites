@@ -6,11 +6,11 @@
     <div id="myhome-layout">
     
         <el-container class="ml-layout">
-            <el-aside style="width:15%;" v-if="this.$store.state.showLayoutItem[0]">
+            <el-aside style="width:15%;" v-if="this.$store.state.showLayoutItem[0]==1">
                 <MLSiderMenu style="position: fixed;width:220px"></MLSiderMenu>
             </el-aside>
             <el-main  style="padding:0px;width:65%;overflow: visible">
-                <div class="ml-banner" v-if="this.$store.state.showLayoutItem[1]">
+                <div class="ml-banner" v-if="this.$store.state.showLayoutItem[1]==2">
                     <div style="color:white;font-size:1.8em">欢迎来到我的个人空间</div>
                     <br/>
                     <div style="color:rgba(255,255,255,0.8);width:60%;">这里是本人的第二个首页，但是建设尚未完成，所以请多多包涵</div>
@@ -20,7 +20,7 @@
                     <el-main style="padding:0px;height:100%;flex-basis:1100px;max-width:2000px;width:75%;overflow: visible">
                         <router-view/>
                     </el-main>
-                    <el-aside style="padding:0px;height:100%;flex-basis:350px;max-width:2000px;width:30%" v-if="this.$store.state.showLayoutItem[2]">
+                    <el-aside style="padding:0px;height:100%;flex-basis:350px;max-width:2000px;width:30%" v-if="this.$store.state.showLayoutItem[2]==3">
                         <MLContentSider></MLContentSider>
                     </el-aside>
                 </el-container>

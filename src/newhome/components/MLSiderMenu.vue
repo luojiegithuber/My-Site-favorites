@@ -49,14 +49,14 @@
       </a-sub-menu>
       <a-sub-menu key="sub3" @titleClick="titleClick">
         <span slot="title"><a-icon type="appstore" /><span>个人项目</span></span>
-        <a-menu-item key="3-1">
-            疫情天眼
+        <a-menu-item key="疫情天眼">
+            疫情天眼Echarts
         </a-menu-item>
-        <a-menu-item key="3-2">
-            血缘可视化
+        <a-menu-item key="血缘可视化">
+            血缘可视化Gojs
         </a-menu-item>
-        <a-menu-item key="3-3">
-            猜颜色游戏
+        <a-menu-item key="猜颜色游戏">
+            猜颜色游戏React
         </a-menu-item>
 
       </a-sub-menu>
@@ -110,6 +110,16 @@ export default {
           break;
         case '其他':
           this.bus.$emit("toCollection", '其他');
+          break;
+
+        case '疫情天眼':
+          window.open("http://www.luojiework.cn:8017/#/Home");
+          break;
+        case '血缘可视化':
+          window.open("http://www.luojiework.cn:8020/#/BloodHome");
+          break;
+        case '猜颜色游戏':
+          window.open("http://www.luojiework.cn:8019");
           break;
         default:
           break;

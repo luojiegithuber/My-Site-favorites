@@ -23,6 +23,7 @@ import MyCardContainer from './MyCardContainer'
 import MyLove from './MyLove'
 import RecommendedRead from './RecommendedRead'
 
+
 export default {
   name: 'MLContentSider',                                  
   components:{
@@ -38,13 +39,7 @@ export default {
 
     }
   },
-  mounted(){
 
-  },
-  methods:{
-   
-
-  }
 }
 </script>
 

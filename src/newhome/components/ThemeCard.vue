@@ -2,7 +2,7 @@
   <!-- 这是一种容器 -->
   <div class="theme-card">
       <span style="font:bold 1.2em arial,sans-serif;color:black">{{title}}</span>
-      <a style="float:right" :href="more">更多</a>
+      <!--<a style="float:right" :href="more">更多</a>-->
       <hr/>
 
       <slot></slot>

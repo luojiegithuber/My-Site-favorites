@@ -60,14 +60,8 @@
 </template>
 
 <script>
-    import portrait from '@/components/portrait';
-    import HeadNav from '@/components/HeadNav';
-  export default {
 
-    components:{
-      'my-portrait':portrait,
-      'my-headnav':HeadNav
-    },
+  export default {
 
     data() {
       return {
@@ -80,6 +74,13 @@
         contents: [],
         temp_contents:[]
       };
+    },
+
+    created() {
+      if (localStorage.getItem("userMsg")) {
+
+         this.$store.replaceState(Object.assign({}, this.$store.state,JSON.parse(localStorage.getItem("userMsg"))))
+      }
     },
 
     methods:{
@@ -119,10 +120,11 @@
       }
     },
     mounted() {
-      this.getAllBlog()
 
+        this.getAllBlog()
 
-    }
+    },
+
   };
 </script>
 

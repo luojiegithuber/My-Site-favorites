@@ -50,9 +50,6 @@ export default {
 
     }
   },
-    beforeCreate(){
-        this.$store.dispatch("changeShowLayoutItemFun",[1,null,3]);
-    },
   mounted(){
 
   },

@@ -24,21 +24,15 @@ module.exports = {
                     '^/outapi':''
                 }
             },
-            '/Feiyanapi': {
+            '/tianapi': {
                  //target: 'https://server.toolbon.com',
-                 target: 'https://www.tianqiapi.com',
+                 target: 'http://api.tianapi.com',
                  changeOrigin:true,
                  pathRewrite:{
-                     '^/Feiyanapi':''
+                     '^/tianapi':''
                  }
              },
-            '/Feiyanapi2': {
-                 target: 'http://www.tianqiapi.com',
-                 changeOrigin:true,
-                 pathRewrite:{
-                     '^/Feiyanapi2':''
-                 }
-             },
+             //http://api.tianapi.com/
     },
 
     // Various Dev Server settings
